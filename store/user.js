@@ -3,11 +3,12 @@ export const state = () => ({
 });
 
 export const mutations = {
-  logIn(state, token) {
+  LOGIN(state, token) {
     sessionStorage.setItem("user-token", token);
     state.token = token;
   },
-  logOut(state) {
+  LOGOUT(state) {
+    sessionStorage["user-token"] = null;
     state.token = null;
   }
 };
@@ -18,11 +19,10 @@ export const actions = {
       const { token } = await this.$axios.$get("/login", {
         params: { ...User }
       });
-      console.info("WTF: ", token);
-      commit("logIn", token);
+      commit("LOGIN", token);
       this.$router.push("/");
     } catch ({ response }) {
-      sessionStorage.removeItem("user-token", token);
+      alert(response.data.message);
       // this.$notice('Ошибка авторизации', response.data.message, 'danger')
       // commit(
       //   "setNotice",

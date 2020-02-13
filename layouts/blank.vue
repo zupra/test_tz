@@ -1,5 +1,6 @@
 <template lang="pug">
 #Layout_blank
+
   //- NOTICE
   <nuxt/>
 </template>

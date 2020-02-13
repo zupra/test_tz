@@ -1,0 +1,129 @@
+
+Search()
+  padding-left 2.4em !important
+  background #FFF url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='13' height='13'><g stroke-width='2' stroke='blueviolet'><circle cx='5' cy='5'  r='4' style='fill:none;' /><line x1='9' y1='9' x2='13' y2='13' /></g></svg>") 1em 50% no-repeat
+
+// UTILS
+.vgt-global-search input
+  // font-size 1em
+  Search()
+  margin-bottom 1em
+
+// .filter-th input
+//   // width 100%
+//   min-width 100%
+//   width 7em
+//   Search()
+
+// // margin-bottom 4px
+// .vgt-responsive
+//   clear both
+//   margin-top 8px
+//   /*
+//   overflow auto
+//   max-height 600px
+//   outline 1px solid #dee2e6
+//   resize vertical
+//   */
+
+// /*
+// .vgt-table thead
+//   tr:first-child th
+//     background #c5c5c5 // #bcc7e0
+//     position sticky
+//     top 0
+//     z-index 1
+// */
+// /* TABLE
+// mod конкретной table вместо глобального width 100%
+// .VGT_100w .vgt-table
+//   width 100%
+// */
+
+
+.vgt-table
+  table-layout: fixed;
+  width: 100%;
+  td, th
+    border-right 1px solid #dee2e6
+    &:last-child
+      border-right 0
+  
+  td
+    overflow scroll
+  th
+    cursor pointer
+    user-select none
+    &:hover
+      color #000
+    // span:before
+    //   content "⇅" // ⬍ ⇅ 
+    // &:hover
+    //   border-bottom-color #C7CEDE
+  // td
+  //   width: 10%;
+  tbody
+    tr
+      &:nth-child(even)
+        background ghostwhite
+
+
+
+
+.sorting
+  // background #EEE
+  border-bottom-color #3abaae
+  &:after
+    color #CCC
+    // content "⇅ "
+  &-desc
+    &:after
+      content " ⬆ "
+  &-asc
+    &:after
+      content " ⬇ "
+
+
+
+
+
+// FOOTER
+.vgt-wrap__footer
+  display flex
+  justify-content space-between
+  background #f7f7f7
+  padding .5em 1em
+
+
+.footer__row-count__select
+  width 5em
+.footer__row-count
+  margin-left 1em
+
+.footer__navigation
+  margin-left 1em
+  display flex
+  align-items center
+  &__info
+    margin 0 1em
+  &__page-info
+    padding 0 1em
+  &__page-btn
+    outline none
+    text-decoration none
+    padding 0 1em
+    height 2em
+    border-radius .3em
+    display inline-flex
+    align-items center
+    justify-content center
+    // box-shadow 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12)
+    cursor pointer
+    user-select none
+    transition background .3s
+    background #EEE //#3498db
+    // &:active
+    // transform translateY(2px)
+    border 1px solid transparent
+    &:hover
+      border-color #CCC

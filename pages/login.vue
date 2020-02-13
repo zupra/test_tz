@@ -3,6 +3,7 @@ form#login_form(
   @submit.prevent="logIn()"
 )
   input.lg(
+    type="text"
     name="username"
     autocomplete="on"
     placeholder="username"

@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "vue-good-table": "^2.18.1"
   },
   "devDependencies": {
     "pug": "^2.0.4",
