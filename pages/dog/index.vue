@@ -21,6 +21,17 @@ div
           :to="`/trustee/${props.row.trustee}`"
         ) {{`link to ${props.row.trustee}`}}
 
+      //- inputs
+      template(v-else-if="props.column.field == 'name'")
+        input(
+          type="text"
+          v-model="props.row.name"
+        )
+      template(v-else-if="props.column.field == 'kind'")
+        input(
+          type="text"
+          v-model="props.row.name"
+        )
 
   //- pre {{$data}}
 </template>
@@ -49,7 +60,7 @@ export default {
           field: "name"
         },
         {
-          label: "photo",
+          label: "kind",
           field: "kind"
         },
         {

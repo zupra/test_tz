@@ -15,6 +15,14 @@ div
           :title="`перейти /trustee/${props.row.id}`"
           :to="`/trustee/${props.row.id}`"
         ) {{`link ${props.row.id}`}}
+
+      //- inputs
+      template(v-else-if="props.column.field == 'fio'")
+        input(
+          type="text"
+          v-model="props.row.fio"
+        )
+
   //- pre {{$data}}
 </template>
 

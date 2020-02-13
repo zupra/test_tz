@@ -27,6 +27,20 @@ div
           :title="`перейти /payment/${props.row.id}`"
           :to="`/payment/${props.row.id}`"
         ) {{`link ${props.row.id}`}}
+
+      //- inputs
+      template(v-else-if="props.column.field == 'sum'")
+        input(
+          type="text"
+          v-model="props.row.sum"
+        )
+      template(v-else-if="props.column.field == 'purpose'")
+        input(
+          type="text"
+          v-model="props.row.purpose"
+        )
+
+
   //- pre {{$data}}
 </template>
 

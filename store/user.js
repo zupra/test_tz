@@ -1,15 +1,14 @@
 export const state = () => ({
-  // token: sessionStorage.getItem("user-token") || null
-  token: null
+  token: sessionStorage.getItem("user-token") || null
 });
 
 export const mutations = {
   LOGIN(state, token) {
-    // sessionStorage.setItem("user-token", token);
+    sessionStorage.setItem("user-token", token);
     state.token = token;
   },
   LOGOUT(state) {
-    // sessionStorage["user-token"] = null;
+    sessionStorage["user-token"] = null;
     state.token = null;
   }
 };
