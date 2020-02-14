@@ -42,17 +42,16 @@ Search()
 
 
 .vgt-table
-  table-layout: fixed;
+  // table-layout: fixed;
   width: 100%;
   td, th
     border-right 1px solid #dee2e6
     &:last-child
       border-right 0
   
-  td
-    overflow scroll
+  // td
+  //   overflow scroll
   th
-    cursor pointer
     user-select none
     &:hover
       color #000
@@ -68,13 +67,16 @@ Search()
         background ghostwhite
 
 
-
-
+.sortable
+  padding-right: 1.4em;
+  cursor pointer
 .sorting
   // background #EEE
   border-bottom-color #3abaae
+  position relative
   &:after
     color #CCC
+    position absolute
     // content "⇅ "
   &-desc
     &:after

@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+#page
   VueGoodTable.mt-5(
     :columns="columns"
     :rows="res.results"
@@ -23,7 +23,14 @@ div
           v-model="props.row.fio"
         )
 
-  //- pre {{$data}}
+      //- photo 
+      template(v-else-if="props.column.field == 'photo'")
+        img(
+          :src="props.row.photo"
+        )
+
+
+  pre {{$data}}
 </template>
 
 <script>

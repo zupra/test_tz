@@ -1,5 +1,5 @@
 <template lang="pug">
-div
+#page
   VueGoodTable.mt-5(
     :columns="columns"
     :rows="res.results"

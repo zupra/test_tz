@@ -9,6 +9,7 @@ input[type='search'],
 input[type='tel'],
 input[type='text'],
 input[type='url'],
+
 textarea,
 select
 	font-size inherit
@@ -27,12 +28,17 @@ select
 		border-color: color-primary
 		outline: 0
 
+
+
+
 select
-	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#d1d1d1" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>') center right no-repeat
+	cursor: pointer
+	// background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='12'><polygon points='0,0 12,0 6,12' fill='orange'/></svg>") 100%/1.4em no-repeat 
+	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='14' viewBox='0 0 29 14' width='29'><path fill='orange' d='M9.37727 3.625l5.08154 6.93523L19.54036 3.625'/></svg>") center right no-repeat
 	padding-right: 3.0rem
 
-	&:focus
-		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#9b4dca" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>')
+	// &:focus
+	// 	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="red" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>')
 
 textarea
 	min-height: 6.5rem

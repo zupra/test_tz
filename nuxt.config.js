@@ -1,5 +1,15 @@
+const routerBase =
+  process.env.DEPLOY_ENV === "GH_PAGES"
+    ? {
+        router: {
+          base: "/test_tz/"
+        }
+      }
+    : {};
+
 export default {
   mode: "spa",
+  ...routerBase,
   /*
    ** Headers of the page
    */
@@ -15,12 +25,12 @@ export default {
       }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
-      // {
-      //   rel: "stylesheet",
-      //   href:
-      //     "https://fonts.googleapis.com/icon?family=Material+Icons"
-      // }
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href:
+          "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      }
     ]
   },
   /*
@@ -34,7 +44,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ["~/plugins/axios"],
+  plugins: ["~/plugins/axios", "~plugins/click-outside"],
   /*
    ** Nuxt.js dev-modules
    */

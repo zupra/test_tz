@@ -41,4 +41,7 @@ export default {
   top 0
   width 100%
   z-index 10
+
+#page
+  margin 1em
 </style>
