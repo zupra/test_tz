@@ -16,9 +16,13 @@ export const mutations = {
 export const actions = {
   async login({ commit }, User) {
     try {
-      const { token } = await this.$axios.$get("/login", {
-        params: { ...User }
-      });
+      const { token } = await this.$axios.$post(
+        "/login/",
+        User
+        // {
+        //   params: { ...User }
+        // }
+      );
       commit("LOGIN", token);
       this.$router.push("/");
     } catch ({ response }) {
