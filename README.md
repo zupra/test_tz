@@ -20,3 +20,5 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+![Test Image 4](https://raw.githubusercontent.com/zupra/test/gh-pages/img/crud_test_tz.png)
